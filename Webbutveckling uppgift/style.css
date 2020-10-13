@@ -1,0 +1,53 @@
+#header {
+  background-color: lightblue;
+}
+
+#weed {
+  position: relative;
+  height: 150px;
+  width: 180px;
+  left: 850px;
+  bottom: 110px;
+}
+
+#headertext {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  top: 45px;
+}
+
+#search {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  height: 50px;
+  width: 60px;
+  left: 950px;
+  bottom: 200px;
+}
+
+#searchText {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 1130px;
+  bottom: 210px;
+}
+
+#loggain {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  height: 50px;
+  width: 60px;
+  left: 1300px;
+  bottom: 320px;
+}
+
+#loggainText {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 1290px;
+  bottom: 330px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+
+@mixin font($font) {
+  font-family: $font; 
+}
+
+@mixin relative($position) {
+  position: $position;
+}
+
+@mixin headerImages($position, $height, $width) {
+  position: $position;
+  height: $height;
+  width: $width;
+}
+
+
+
+
+
+
+
