@@ -6,15 +6,14 @@
   position: relative;
   height: 150px;
   width: 180px;
-  left: 850px;
-  bottom: 110px;
+  left: 830px;
+  bottom: 149px;
 }
 
 #headertext {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 60px;
-  top: 45px;
 }
 
 #search {
@@ -24,14 +23,14 @@
   height: 50px;
   width: 60px;
   left: 950px;
-  bottom: 200px;
+  bottom: 250px;
 }
 
 #searchText {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   left: 1130px;
-  bottom: 210px;
+  bottom: 275px;
 }
 
 #loggain {
@@ -41,13 +40,46 @@
   height: 50px;
   width: 60px;
   left: 1300px;
-  bottom: 320px;
+  bottom: 369px;
 }
 
 #loggainText {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
-  left: 1290px;
-  bottom: 330px;
+  left: 1282px;
+  bottom: 394px;
+}
+
+#header {
+  position: relative;
+  border: 10px;
+  height: 155px;
+  border-style: solid;
+  border-color: black;
+}
+
+#sale1 {
+  position: relative;
+  height: 340px;
+  width: 390px;
+  border-radius: 8px;
+  opacity: 1;
+  display: block;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#text1 {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */

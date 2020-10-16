@@ -9,15 +9,14 @@
     @include relative($position);
     height: 150px;
     width: 180px;
-   left: 850px;
-   bottom: 110px;
+   left: 830px;
+   bottom: 149px;
   }
 
   #headertext {
     @include relative($position);
     @include font($font);
     font-size: 60px;
-  top: 45px;
   }
 
   #search {
@@ -25,14 +24,14 @@
       @include font($font);
       @include headerImages($position, $height, $width);
       left: 950px;
-      bottom: 200px;
+      bottom: 250px;
   }
 
   #searchText {
     @include font($font);
     @include relative($position);
     left: 1130px;
-    bottom: 210px;
+    bottom: 275px;
   }
 
   #loggain {
@@ -40,15 +39,41 @@
     @include font($font);
     @include headerImages($position, $height, $width);
     left: 1300px;
-    bottom: 320px;
+    bottom: 369px;
   }
 
   #loggainText {
     @include relative($position);
     @include font($font);
-    left: 1290px;
-    bottom: 330px;
+    left: 1282px;
+    bottom: 394px;
   }
+
+  #header {
+    @include relative($position);
+    border: 10px;
+    height: 155px;
+    border-style: solid;
+    border-color: black;
+  }
+
+  #main {
+
+  }
+
+ #sale1 {
+ @include textBoxesImage($heightMain, $widthMain, $borderRadius);
+ @include textBoxesImageText($opacity, $display, $transition, $backfacevisibility);
+  }
+
+  #text1 {
+    @include MiddleText($transition, $opacityText, $absolute, $size, $transform);
+  }
+
+  #sale1General {
+    
+  }
+
 
 
 

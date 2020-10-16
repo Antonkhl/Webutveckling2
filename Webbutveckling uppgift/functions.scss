@@ -15,6 +15,32 @@
   width: $width;
 }
 
+@mixin textBoxesImage($heightMain, $widthMain, $borderRadius) {
+  position: $position;
+  height: $heightMain;
+  width: $widthMain;
+  border-radius: $borderRadius;
+}
+
+@mixin textBoxesImageText($opacity, $display, $transition, $backfacevisibility) {
+  opacity: $opacity;
+  display: $display;
+  transition: $transition;
+  backface-visibility: $backfacevisibility;
+}
+
+@mixin MiddleText($transition, $opacityText, $absolute, $size, $transform) {
+  transition: $transition;
+  opacity: $opacityText;
+  position: $absolute;
+  top: $size;
+  left: $size;
+  transform: $transform;
+  -ms-transform: $transform;
+}
+
+
+
 
 
 
