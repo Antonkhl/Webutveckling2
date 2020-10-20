@@ -9,6 +9,10 @@
   position: $position;
 }
 
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
 @mixin headerImages($position, $height, $width) {
   position: $position;
   height: $height;
@@ -29,7 +33,7 @@
   backface-visibility: $backfacevisibility;
 }
 
-@mixin MiddleText($transition, $opacityText, $absolute, $size, $transform) {
+@mixin MiddleText($transition, $opacityText, $absolute, $size, $transform, $text-align) {
   transition: $transition;
   opacity: $opacityText;
   position: $absolute;
@@ -37,8 +41,24 @@
   left: $size;
   transform: $transform;
   -ms-transform: $transform;
+  text-align: $text-align;
 }
 
+@mixin imageHover($opacityHover) {
+opacity: $opacityHover;
+}
+
+@mixin boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding) {
+ background-color: $box_bgcolor;
+ color: $box_textcolor;
+ font-size: $box_fontSize;
+ padding: $box_padding;
+}
+
+@mixin textSize() {
+  height: 100px;
+  width: 100px;
+}
 
 
 

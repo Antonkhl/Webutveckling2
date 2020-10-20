@@ -64,16 +64,28 @@
  #sale1 {
  @include textBoxesImage($heightMain, $widthMain, $borderRadius);
  @include textBoxesImageText($opacity, $display, $transition, $backfacevisibility);
+ left: 100px;
+
   }
 
   #text1 {
-    @include MiddleText($transition, $opacityText, $absolute, $size, $transform);
+    @include MiddleText($transition, $opacityText, $absolute, $size, $transform, $text-align);
   }
 
-  #sale1General {
-    
+  #sale1General:hover #sale1 {
+@include imageHover($opacityHover);
   }
 
+  #sale1General:hover #text1 {
+    @include opacity($opacity);
+  } 
+
+  #text1 {
+    @include boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding);
+  }
+  
+
+ 
 
 
 

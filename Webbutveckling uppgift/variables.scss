@@ -16,11 +16,21 @@ $opacity: 1;
 $display: block;
 $transition: 0.5s ease;
 $backfacevisibility: hidden;
+$opacityHover: 0.3;
 
 //Images middle
 $opacityText: 0;
 $absolute: absolute;
 $size: 50%;
 $transform: translate(-50%, -50%);
+$text-align: center;
+
+//texts middle
+$box_bgcolor: green;
+$box_textcolor: white;
+$box_fontSize: 16px;
+$box_padding: 16px, 32px;
+$box_TextHeight: 100px;
+$box_TextWidth: 100px;
 
 
