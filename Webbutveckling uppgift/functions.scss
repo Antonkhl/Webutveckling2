@@ -48,12 +48,17 @@
 opacity: $opacityHover;
 }
 
-@mixin boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding) {
+@mixin boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border) {
  background-color: $box_bgcolor;
  color: $box_textcolor;
  font-size: $box_fontSize;
  padding: $box_padding;
+ height: $box_TextHeight;
+ width: $box_TextWidth;
+ border: $box_border;
 }
+
+
 
 @mixin textSize() {
   height: 100px;

@@ -1,5 +1,10 @@
+
+//Importar andra scss
+
 @import './functions.scss';
 @import './variables.scss';
+
+//Headern
 
 #header {
     background-color:lightblue;
@@ -57,32 +62,71 @@
     border-color: black;
   }
 
-  #main {
 
-  }
+  //Main, alla bilder och deras text boxar
 
+  //Box 1
  #sale1 {
  @include textBoxesImage($heightMain, $widthMain, $borderRadius);
  @include textBoxesImageText($opacity, $display, $transition, $backfacevisibility);
- left: 100px;
+ left: 200px;
+ top: 100px;
+ 
+ 
 
   }
 
   #text1 {
     @include MiddleText($transition, $opacityText, $absolute, $size, $transform, $text-align);
+    @include boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border);
+    top: 450px;
+    left: 395px;
+    
+
+    
   }
 
   #sale1General:hover #sale1 {
 @include imageHover($opacityHover);
+
+
   }
 
   #sale1General:hover #text1 {
     @include opacity($opacity);
+    
+    
+
   } 
 
-  #text1 {
-    @include boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding);
+  //Box 2
+
+  #sale2 {
+ @include textBoxesImage($heightMain, $widthMain, $borderRadius);
+ @include textBoxesImageText($opacity, $display, $transition, $backfacevisibility);
+ left: 1000px;
+ bottom: 235px;
+
+ 
+ 
   }
+
+  #text2 {
+    @include MiddleText($transition, $opacityText, $absolute, $size, $transform, $text-align);
+    @include boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border);
+  
+
+  }
+
+  #sale2General:hover #sale2 {
+    @include imageHover($opacityHover);
+   
+      }
+    
+      #sale2General:hover #text2 {
+        @include opacity($opacity);
+      } 
+
   
 
  
