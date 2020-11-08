@@ -1,17 +1,15 @@
 @import './variables.scss';
 
-
+//Gör en funktion för vad fonten ska vara för hela sidan.
 @mixin font($font) {
   font-family: $font; 
 }
 
+//Gör en funktion för att definera att postion är relative, så att jag inte behöver skriva positon: relative överallt
 @mixin relative($position) {
   position: $position;
 }
 
-@mixin opacity($opacity) {
-  opacity: $opacity;
-}
 
 @mixin headerImages($position, $height, $width) {
   position: $position;
@@ -19,24 +17,25 @@
   width: $width;
 }
 
-@mixin textBoxesImage($heightMain, $widthMain, $borderRadius) {
+@mixin textBoxesImage($heightMain, $widthMain, $borderRadius, $position) {
   position: $position;
   height: $heightMain;
   width: $widthMain;
   border-radius: $borderRadius;
 }
 
-@mixin textBoxesImageText($opacity, $display, $transition, $backfacevisibility) {
+@mixin textBoxesImageText($opacity, $display, $transition, $backfacevisibility, $position) {
   opacity: $opacity;
   display: $display;
   transition: $transition;
   backface-visibility: $backfacevisibility;
+  position: $position;
 }
 
-@mixin MiddleText($transition, $opacityText, $absolute, $size, $transform, $text-align) {
+@mixin MiddleText($transition, $opacityText, $position, $size, $transform, $text-align) {
   transition: $transition;
   opacity: $opacityText;
-  position: $absolute;
+  position: $position;
   top: $size;
   left: $size;
   transform: $transform;
@@ -44,11 +43,16 @@
   text-align: $text-align;
 }
 
-@mixin imageHover($opacityHover) {
+@mixin imageHover($opacityHover, $position) {
 opacity: $opacityHover;
+position: $position;
 }
 
-@mixin boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border) {
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+@mixin boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border, $position) {
  background-color: $box_bgcolor;
  color: $box_textcolor;
  font-size: $box_fontSize;
@@ -56,14 +60,66 @@ opacity: $opacityHover;
  height: $box_TextHeight;
  width: $box_TextWidth;
  border: $box_border;
+ position: $position;
 }
 
 
 
-@mixin textSize() {
-  height: 100px;
-  width: 100px;
+@mixin imgSizeWeed($img_weed_width, $img_weed_height) {
+  height: $img_weed_width;
+  width: $img_weed_height;
 }
+
+@mixin Headers($bold, $font_size_medias) {
+  font-weight: $bold;
+  font-size: $font_size_medias;
+}
+
+@mixin SocialMediaIcons($social_media_sizes) {
+ height: $social_media_sizes;
+ width: $social_media_sizes;
+}
+
+@mixin TextSizing($font_size_medias) {
+  font-size: $font_size_medias;
+}
+
+@mixin sideNavigation($menu_height, $menu_width, $menu_top, $menu_left, $fixed, $menu_zindex, $menu_bgc, $menu_hidden, $menu_top_padding) {
+  height: $menu_height;
+  width: $menu_width;
+  position: $fixed;
+  z-index: $menu_zindex;
+  top: $menu_top;
+  left: $menu_left;
+  background-color: $menu_bgc;
+  overflow-x: $menu_hidden;
+  transition: $menu_transition;
+  padding-top: $menu_top_padding;
+}
+
+@mixin sideNavigationItems($menu_padding, $menu_font_size, $menu_item_color, $block, $menu_text_decoration, $items_transition) {
+  padding: $menu_padding;
+  text-decoration: $menu_text_decoration;
+  font-size: $menu_font_size;
+  color: $menu_item_color;
+  display: $block;
+  transition: $items_transition;
+}
+
+@mixin sideMenuHover($color_hover) {
+  $color: $color_hover;
+}
+
+@mixin NavigationButton($button_postion, $button_right, $button_fontsize, $button_margin_left, $bottom_top) {
+position: $button_postion;
+top: $bottom_top;
+right: $button_right;
+font-size: $button_fontsize;
+margin-left: $button_margin_left;
+}
+
+
+
 
 
 

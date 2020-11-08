@@ -4,12 +4,27 @@
 @import './functions.scss';
 @import './variables.scss';
 
+
 //Headern
 
+//får bort med alla overflows i min sida.
+
+body {
+  overflow-x: hidden;
+}
+
+#container {
+  height: 3100px;
+  overflow: hidden;
+}
+
+
+//Lägger till färg till headern
 #header {
     background-color:lightblue;
 }
 
+//Ändrar storlek och position på min bild
 #weed {
     @include relative($position);
     height: 150px;
@@ -18,15 +33,17 @@
    bottom: 149px;
   }
 
+  //Lägger till font, och ändrar storlek på headerns text
   #headertext {
     @include relative($position);
     @include font($font);
     font-size: 60px;
   }
 
+
+//lägger till postion, och storlek på min bild
   #search {
       @include relative($position);
-      @include font($font);
       @include headerImages($position, $height, $width);
       left: 950px;
       bottom: 250px;
@@ -54,8 +71,8 @@
     bottom: 394px;
   }
 
+  //lägger till border, och definerar storlek på min header
   #header {
-    @include relative($position);
     border: 10px;
     height: 155px;
     border-style: solid;
@@ -65,72 +82,211 @@
 
   //Main, alla bilder och deras text boxar
 
-  //Box 1
- #sale1 {
- @include textBoxesImage($heightMain, $widthMain, $borderRadius);
- @include textBoxesImageText($opacity, $display, $transition, $backfacevisibility);
- left: 200px;
- top: 100px;
  
- 
+  //Jag lägger till mina funktioner till alla dessa text för att göra de till dessa rutor. 
+#text1,#text2,#text3,#text4,#text5,#text6 {
+    @include MiddleText($transition, $opacityText, $position, $size, $transform, $text-align);
+    @include boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border, $position);
+    
+}
 
+//Lägger till alla mina funktioner till mina bilder, 
+  #sale1,#sale2,#sale3,#sale4,#sale5,#sale6 {
+ @include textBoxesImage($heightMain, $widthMain, $borderRadius, $position);
+ @include textBoxesImageText($opacity, $display, $transition, $backfacevisibility, $position);
+ 
+}
+
+//Lägger till en hover funktion till alla bilder
+  #sale1General:hover #sale1, #sale2General:hover #sale2, #sale3General:hover #sale3, #sale4General:hover #sale4, #sale5General:hover #sale5, #sale6General:hover #sale6  {
+@include imageHover($opacityHover, $position);
+
+  }
+
+  //Lägger till opaciteten när man hovrar över en av dessa bilder. 
+  #sale1General:hover #text1, #sale2General:hover #text2, #sale3General:hover #text3, #sale4General:hover #text4, #sale5General:hover #text5, #sale6General:hover #text6 {
+    @include opacity($opacity);
+    
+  } 
+
+
+  //positioning, postionerar var alla bilder ska vara
+
+  #sale1 {
+    top: 100px;
+    left: 180px;
   }
 
   #text1 {
-    @include MiddleText($transition, $opacityText, $absolute, $size, $transform, $text-align);
-    @include boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border);
-    top: 450px;
-    left: 395px;
-    
-
-    
+    left: 380px;
+    bottom: 70px;
   }
-
-  #sale1General:hover #sale1 {
-@include imageHover($opacityHover);
-
-
-  }
-
-  #sale1General:hover #text1 {
-    @include opacity($opacity);
-    
-    
-
-  } 
-
-  //Box 2
 
   #sale2 {
- @include textBoxesImage($heightMain, $widthMain, $borderRadius);
- @include textBoxesImageText($opacity, $display, $transition, $backfacevisibility);
- left: 1000px;
- bottom: 235px;
-
- 
- 
+bottom: 480px;
+left: 1050px;
   }
 
   #text2 {
-    @include MiddleText($transition, $opacityText, $absolute, $size, $transform, $text-align);
-    @include boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border);
+    bottom: 648px;
+    left: 1245px;
+  } 
+
+  #sale3 {
+    bottom: 600px;
+    left: 180px;
+  }
+
+  #text3 {
+   position: relative;
+    bottom: 770px;
+    left: 380px;
+  }
+
+  #sale4 {
+    bottom: 1180px;
+    left: 1050px;
+  }
+
+  #text4 {
+    bottom: 1345px;
+    left: 1250px;
+  }
+
+  #sale5 {
+    bottom: 1280px;
+    left: 180px;
+  }
+
+  #text5 {
+    bottom: 1445px;
+    left: 370px;
+  }
+
+  #sale6 {
+    bottom: 1860px;
+    left: 1050px;
+  }  
+
+  #text6 {
+    bottom: 2030px;
+    left: 1250px;
+  }
+
   
+
+  //menu
+
+  //Lägger till funktion för själva navigationen, för att det ska se ut som det gör ut just nu.
+  .sidemenu {
+    @include sideNavigation($menu_height, $menu_width, $menu_top, $menu_left, $fixed, $menu_zindex, $menu_bgc, $menu_hidden, $menu_top_padding);
+  }
+
+  //Lägger till en funktion till alla saker som finns i navigationen, så att det ska se ut some det gär
+  .sidemenu a {
+    @include sideNavigationItems($menu_padding, $menu_font_size, $menu_item_color, $block, $menu_text_decoration, $items_transition);
+  }
+
+  //Lägger till en funktion så att färg ändras när man hovrar något i menun, men det funkar ej av någon orsak. Hade ej tid att fixa.
+  .sidemenu a:hover {
+    @include sideMenuHover($color_hover);
+  
+  }
+
+  //Postionerar vad knappen ska vara.
+#button {
+@include relative($position);
+bottom: 4780px;
+}
+
+//Lägger till en funktion till när knappen stängs. 
+  .sidemenu .closebtn {
+    @include NavigationButton($button_postion, $button_right, $button_fontsize, $button_margin_left, $menu_top);
 
   }
 
-  #sale2General:hover #sale2 {
-    @include imageHover($opacityHover);
-   
-      }
-    
-      #sale2General:hover #text2 {
-        @include opacity($opacity);
-      } 
 
-  
 
- 
 
+  //bottom info
+
+  //Postionerar var bottominfo ska vara
+  #Bottominfo {
+    @include relative($position);
+    bottom: 1900px;
+
+  }
+
+  //ger diven en border backgrunds färg osv
+#Bottominfo {
+  background-color: lightblue;
+  border: 10px;
+  border-style: solid;
+  border-color: black;
+}
+
+//postionerar var loggan ska vara.
+  #weed2 {
+    @include imgSizeWeed($img_weed_width, $img_weed_height);
+    @include relative($position);
+left: 630px;
+  }
+
+  //postionerar var texten för sociala medier ska var
+  #socialamedier {
+    @include font($font);
+@include Headers($bold, $font_size_medias);
+@include relative($position);
+left: 590px;
+bottom: 50px;
+  }
+
+  //postionerar var alla dessa sociala medier loggor ska vara och ändrar på storlek
+  #facebook, #twitter, #instagram {
+    @include SocialMediaIcons($social_media_sizes);
+    @include relative($position);
+    left: 300px;
+    bottom: 70px;
+  }
+
+//Postionerar och ändrar storlek på alla sociala medier texter
+  #facebooktext, #twittertext, #instagramtext {
+    @include TextSizing($font_size_medias);
+    @include relative($position);
+    left: 360px;
+    bottom: 163px;
+  }
+
+  //Ändrar storlek och postionerar informatiosn headers
+  #information {
+    @include Headers($bold, $font_size_medias);
+    @include relative($position);
+    left: 585px;
+    bottom: 120px;
+  }
+
+    //Ändrar storlek och postionerar informations text
+  #informationText {
+    @include TextSizing($font_size_medias);
+    @include relative($position);
+    bottom: 135px;
+  }
+
+      //Ändrar storlek och postionerar adress texten
+  #adresstext {
+    @include TextSizing($font_size_medias);
+    @include relative($position);
+    left: 560px;
+    bottom: 160px;
+  }
+
+    //Ändrar storlek och postionerar adress headern
+  #adress {
+    @include Headers($bold, $font_size_medias);
+    @include relative($position);
+    bottom: 130px;
+    left: 580px;
+  }
 
 
 

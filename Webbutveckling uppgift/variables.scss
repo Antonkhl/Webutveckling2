@@ -20,10 +20,9 @@ $opacityHover: 0.3;
 
 //Images middle
 $opacityText: 0;
-$absolute: absolute;
 $size: 50%;
 $transform: translate(-50%, -50%);
-$text-align: center;
+$text-align: none;
 
 //texts middle
 $box_bgcolor: green;
@@ -33,5 +32,39 @@ $box_padding: 16px, 32px;
 $box_TextHeight: 230px;
 $box_TextWidth: 200px;
 $box_border: 5px solid #555;
+
+//menu
+$menu_height: 100%;
+$menu_width: 0;
+$fixed: fixed;
+$menu_zindex: 1;
+$menu_top: 0;
+$menu_left: 0;
+$menu_bgc: #111;
+$menu_hidden: hidden;
+$menu_transition: 0.5s;
+$menu_top_padding: 60px;
+$menu_padding: 8px 8px 8px 32px;
+$menu_font_size: 25px;
+$menu_item_color: #818181;
+$block: block;
+$color_hover: #f1f1f1;
+$button_postion: relative;
+$button_right: 0px;
+$button_fontsize: 36px;
+$button_margin_left: 50px;
+$menu_text_decoration: none;
+$items_transition: 0.3s;
+$bottom_top: 0;
+
+
+//Bottom info 
+$img_weed_width: 200px;
+$img_weed_height: 200px;
+$bold: bold;
+$font_size_medias: 40px;
+$social_media_sizes: 50px;
+
+
 
 
